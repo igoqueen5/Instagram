@@ -9,5 +9,6 @@ class NoticeMailer < ApplicationMailer
     @greeting = "Hi"
     @pict = pict
     mail to: "igoqueen5@gmail.com"
-         subject: '【Instagram】写真が投稿されました'
+         subject:'Instagram 写真が投稿されました'
   end
+end
