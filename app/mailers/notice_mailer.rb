@@ -6,9 +6,9 @@ class NoticeMailer < ApplicationMailer
   #   en.notice_mailer.sendmail_pict.subject
   #
   def sendmail_pict(pict)
-    @greeting = "Hi"
+
     @pict = pict
     mail to: "igoqueen5@gmail.com"
-         subject:'Instagram 写真が投稿されました'
+        subject: 'Instagram 写真が投稿されました'
   end
 end
