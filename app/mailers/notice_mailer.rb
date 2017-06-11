@@ -11,4 +11,3 @@ class NoticeMailer < ApplicationMailer
     mail to: "igoqueen5@gmail.com"
          subject: '【Instagram】写真が投稿されました'
   end
-end
