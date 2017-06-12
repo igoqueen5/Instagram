@@ -1,5 +1,18 @@
 <%= notice %>
 
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram</title>
+</head>
+
+<body>
+  <ul>
+    <li><a href="">Achieve</a></li>
+    <li>トップページ</li>
+    <li>お問い合わせ</li>
+    <li>ブログ</li>
+  </ul>
+</body>
 <h1>フォト一覧</h1>
 <% @picts.each do |pict| %>
   <p>コメント:<%= pict.comment %></p>
@@ -8,3 +21,9 @@
 <% end %>
 
 <%= link_to "写真を投稿する", new_pict_path %>
+
+<body>
+  <footer>
+    <p>© 2017 Instagram Clone</p>
+  </footer>
+</body>
