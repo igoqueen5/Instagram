@@ -5,11 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <li><%= link_to "Instagram", root_path %></li>
-<li><%= link_to "トップページ", root_path %></li>
-<li><%= link_to "フォト", picts_path %></li>
 </head>
+
 <body>
+  <header>
+    <ul>
+  <li><%= link_to "Instagram", root_path %></li>
+  <li><%= link_to "トップページ", root_path %></li>
+  <li><%= link_to "フォト", picts_path %></li>
+
 
   <% if user_signed_in? %>
   <li><%= link_to 'マイページ', edit_user_registration_path %></li>
@@ -18,8 +22,17 @@
   <li><%= link_to 'ログイン', new_user_session_path  %></li>
   <li><%= link_to 'サインアップ', new_user_registration_path %></li>
 <% end %>
+</ul>
+</header>
+</body>
 
 <%= yield %>
+
+<body>
+  <footer>
+    <p>© 2017 Instagram Clone</p>
+  </footer>
+</body>
 
 </body>
 </html>

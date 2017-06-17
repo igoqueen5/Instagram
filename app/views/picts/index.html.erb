@@ -1,29 +1,20 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+
 <%= notice %>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Instagram</title>
-</head>
 
-<body>
-  <ul>
-    <li><a href="">Achieve</a></li>
-    <li>トップページ</li>
-    <li>お問い合わせ</li>
-    <li>ブログ</li>
-  </ul>
-</body>
+
 <h1>フォト一覧</h1>
 <% @picts.each do |pict| %>
+<div class="row">
   <p>コメント:<%= pict.comment %></p>
   <%= link_to "写真を編集する", edit_pict_path(pict.id) %>
   <%= link_to '写真を削除する', pict_path(pict.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
+</div>
+
 <% end %>
 
 <%= link_to "写真を投稿する", new_pict_path %>
-
-<body>
-  <footer>
-    <p>© 2017 Instagram Clone</p>
-  </footer>
-</body>
+</div>
+</div>

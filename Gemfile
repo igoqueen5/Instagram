@@ -49,6 +49,7 @@ end
 
 group :development do
   gem 'letter_opener_web'
+  gem 'dotenv-rails'
 end
 
 gem 'rails_12factor', group: :production
@@ -56,3 +57,14 @@ gem 'rails_12factor', group: :production
 gem 'rails_admin'
 
 gem 'cancan'
+
+gem 'twitter-bootstrap-rails'
+
+gem 'activeresource'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+gem 'carrierwave'
+gem 'mini_magick'

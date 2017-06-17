@@ -1,0 +1,9 @@
+// Place all the styles related to the users::registrations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+class Users::RegistrationsController < Devise::RegistrationsController
+  def build_resource(hash=nil)
+    hash[:uid] = User.create_unique_string
+    super
+  end
+end
