@@ -4,6 +4,7 @@
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
 
 <h1>フォト一覧</h1>
+
 <% @picts.each do |pict| %>
 <div class="row">
   <h3><%= pict.user_id %></h3>
@@ -13,11 +14,10 @@
   </div>
 
   <p>コメント:<%= pict.comment %></p>
+  <p>写真:<%= image_tag pict.picture %></p>
   <%= link_to "写真を編集する", edit_pict_path(pict.id) %>
   <%= link_to '写真を削除する', pict_path(pict.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
-  <%= link_to "写真を投稿する", new_pict_path %>
 <% end %>
-
 
 </div>
 

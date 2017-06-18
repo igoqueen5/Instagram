@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -12,8 +13,8 @@
     <ul>
   <li><%= link_to "Instagram", root_path %></li>
   <li><%= link_to "トップページ", root_path %></li>
-  <li><%= link_to "フォト", picts_path %></li>
-
+  <li><%= link_to "フォト一覧", picts_path %></li>
+  <li><%= link_to "新規投稿", new_pict_path %></li>
 
   <% if user_signed_in? %>
   <li><%= link_to 'マイページ', edit_user_registration_path %></li>

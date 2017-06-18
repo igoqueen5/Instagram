@@ -1,5 +1,5 @@
 class AddUserIdToPicts < ActiveRecord::Migration
   def change
-    add_column :picts, :user_id, :integer
+    add_column :picts, :picture, :user_id, :integer
   end
 end
