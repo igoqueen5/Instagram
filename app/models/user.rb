@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
-  mount_uploader :avatar, AvatarUploader
+
+   mount_uploader :avatar, AvatarUploader
 
          has_many :picts
 
@@ -43,11 +44,11 @@ class User < ActiveRecord::Base
     end
     user
   end
-end
+
 
 def self.create_unique_string
-    SecureRandom.uuid
-  end
+  SecureRandom.uuid
+end
 
   def update_with_password(params, *options)
     if provider.blank?
@@ -57,3 +58,4 @@ def self.create_unique_string
       update_without_password(params, *options)
     end
   end
+end
