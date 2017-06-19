@@ -1,4 +1,4 @@
 class Pict < ActiveRecord::Base
   belongs_to :user
-  mount_uploader :picture, PictureUploader
+  mount_uploader :photo, PictureUploader
 end

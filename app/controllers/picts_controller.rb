@@ -36,7 +36,7 @@ end
 
   private
    def picts_params
-     params.require(:pict).permit(:comment, :picture)
+     params.require(:pict).permit(:comment, :photo)
    end
 
    def set_pict

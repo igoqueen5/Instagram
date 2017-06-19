@@ -14,7 +14,7 @@
   </div>
 
   <p>コメント:<%= pict.comment %></p>
-  <p>写真:<%= image_tag pict.picture %></p>
+  <p>写真:<%= image_tag pict.photo %></p>
   <%= link_to "写真を編集する", edit_pict_path(pict.id) %>
   <%= link_to '写真を削除する', pict_path(pict.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
 <% end %>
